@@ -84,6 +84,7 @@ public class RandomWalk {
         int n = 30;
         if (args.length > 1) n = Integer.parseInt(args[1]);
         double meanDistance = randomWalkMulti(m, n);
+        // m steps, n experiment times
         System.out.println(m + " steps: " + meanDistance + " over " + n + " experiments");
     }
 
