@@ -19,9 +19,10 @@ public class RandomWalk {
      */
     private void move(int dx, int dy) {
         // TO BE IMPLEMENTED ...
+        x += dx;
+        y += dy;
         // ... END IMPLEMENTATION
     }
-
     /**
      * Perform a random walk of m steps
      *
@@ -29,6 +30,10 @@ public class RandomWalk {
      */
     private void randomWalk(int m) {
         // TO BE IMPLEMENTED ...
+        for (int i = 0; i < m; i++){
+            randomMove();
+        }
+        // For m steps walking, we get move 0, move 1, move 2 ... move m-1.
         // ... END IMPLEMENTATION
     }
 
@@ -40,6 +45,7 @@ public class RandomWalk {
         boolean ns = random.nextBoolean();
         int step = random.nextBoolean() ? 1 : -1;
         move(ns ? step : 0, ns ? 0 : step);
+        // using random and boolean, cool!
     }
 
     /**
@@ -49,7 +55,8 @@ public class RandomWalk {
      */
     public double distance() {
         // TO BE IMPLEMENTED ...
-        return 0;
+        double distance = Math.sqrt(x * x + y * y);
+        return distance;
         // ... END IMPLEMENTATION
     }
 
