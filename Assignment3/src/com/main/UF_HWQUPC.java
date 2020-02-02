@@ -71,7 +71,7 @@ public class UF_HWQUPC implements UF {
     }
 
     /**
-     * Returns the component identifier for the component containing site {@code p}.
+     * Returns the component identifier for the component containing site {@code p} .
      *
      * @param  p the integer representing one site
      * @return the component identifier for the component containing site {@code p}
@@ -81,6 +81,12 @@ public class UF_HWQUPC implements UF {
         validate(p);
         int root = p;
         // TO BE IMPLEMENTED ...
+        if(pathCompression){
+            doPathCompression(p);
+        }
+        while (root != parent[root]) {
+            root = parent[root];
+        }
          // ... END IMPLEMENTATION
         return root;
     }
@@ -169,6 +175,14 @@ public class UF_HWQUPC implements UF {
 
     private void mergeComponents(int i, int j) {
         // TO BE IMPLEMENTED make shorter root point to taller one
+        if(i == j) return;
+        if(height[i] < height[j]){
+            updateParent(i,j);
+            updateHeight(j,i);
+        } else {
+            updateParent(j,i);
+            updateHeight(i,j);
+        }
         // ... END IMPLEMENTATION
     }
 
@@ -177,6 +191,10 @@ public class UF_HWQUPC implements UF {
      */
     private void doPathCompression(int i) {
         // TO BE IMPLEMENTED update parent to value of grandparent
+        while(i != parent[i]){
+            parent[i] = parent[parent[i]];
+            i = parent[i];
+        }
         // ... END IMPLEMENTATION
     }
 }
