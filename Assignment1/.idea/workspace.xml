@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e845979-f3df-4359-a578-087cdb76cabe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assignment3/YanhongChen_001814656.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment3/input data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment3/result table.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/.idea/libraries/junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/report/YanhongChen_Assignmet5.pages" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/report/experienceResult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/report/experienceResult.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/report/relationShips.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/report/testCasePassed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/BSTTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/Element.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/PrivateMethodTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/Queue_Elements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/SizedIterable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment5/src/main/SizedIterableImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalProject/ProjectCode/data/season-1819.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalProject/ProjectCode/data/season-1920.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalProject/ProjectCode/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalProject/ProjectCode/src/rank/CSVReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalProject/ProjectCode/src/rank/Match.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment5/Assignment5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment5/Assignment5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment5/src/main/BSTSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment5/src/main/BSTSimple.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +47,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -46,10 +63,18 @@
       <option name="presentableId" value="Default" />
       <updated>1582260152797</updated>
       <workItem from="1582260154058" duration="4000" />
+      <workItem from="1585366504240" duration="34000" />
+      <workItem from="1585797154715" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="221" y="63" key="SettingsEditor" timestamp="1585366530767">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="63" key="SettingsEditor/1440.23.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1585366530767" />
   </component>
 </project>

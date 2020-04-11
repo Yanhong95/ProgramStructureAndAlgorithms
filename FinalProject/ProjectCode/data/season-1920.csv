@@ -1,0 +1,380 @@
+﻿1,2019/8/9,Liverpool,4,1,Norwich City
+2,2019/8/10,West Ham,0,5,Manchester City
+3,2019/8/10,Burnley,3,0,Southampton
+4,2019/8/10,Bournemouth,1,1,Sheffield Utd
+5,2019/8/10,Watford,0,3,Brighton
+6,2019/8/10,Crystal Palace,0,0,Everton
+7,2019/8/10,Tottenham,3,1,Aston Villa
+8,2019/8/11,Leicester City,0,0,Wolves
+9,2019/8/11,Newcastle Utd,0,1,Arsenal
+10,2019/8/11,Manchester Utd,4,0,Chelsea
+11,2019/8/17,Arsenal,2,1,Burnley
+12,2019/8/17,Norwich City,3,1,Newcastle Utd
+13,2019/8/17,Brighton,1,1,West Ham
+14,2019/8/17,Everton,1,0,Watford
+15,2019/8/17,Southampton,1,2,Liverpool
+16,2019/8/17,Aston Villa,1,2,Bournemouth
+17,2019/8/17,Manchester City,2,2,Tottenham
+18,2019/8/18,Sheffield Utd,1,0,Crystal Palace
+19,2019/8/18,Chelsea,1,1,Leicester City
+20,2019/8/19,Wolves,1,1,Manchester Utd
+21,2019/8/23,Aston Villa,2,0,Everton
+22,2019/8/24,Norwich City,2,3,Chelsea
+23,2019/8/24,Sheffield Utd,1,2,Leicester City
+24,2019/8/24,Brighton,0,2,Southampton
+25,2019/8/24,Watford,1,3,West Ham
+26,2019/8/24,Manchester Utd,1,2,Crystal Palace
+27,2019/8/24,Liverpool,3,1,Arsenal
+28,2019/8/25,Bournemouth,1,3,Manchester City
+29,2019/8/25,Tottenham,0,1,Newcastle Utd
+30,2019/8/25,Wolves,1,1,Burnley
+31,2019/8/31,Southampton,1,1,Manchester Utd
+32,2019/8/31,Manchester City,4,0,Brighton
+33,2019/8/31,West Ham,2,0,Norwich City
+34,2019/8/31,Leicester City,3,1,Bournemouth
+35,2019/8/31,Newcastle Utd,1,1,Watford
+36,2019/8/31,Chelsea,2,2,Sheffield Utd
+37,2019/8/31,Crystal Palace,1,0,Aston Villa
+38,2019/8/31,Burnley,0,3,Liverpool
+39,2019/9/1,Everton,3,2,Wolves
+40,2019/9/1,Arsenal,2,2,Tottenham
+41,2019/9/14,Liverpool,3,1,Newcastle Utd
+42,2019/9/14,Brighton,1,1,Burnley
+43,2019/9/14,Sheffield Utd,0,1,Southampton
+44,2019/9/14,Wolves,2,5,Chelsea
+45,2019/9/14,Manchester Utd,1,0,Leicester City
+46,2019/9/14,Tottenham,4,0,Crystal Palace
+47,2019/9/14,Norwich City,3,2,Manchester City
+48,2019/9/15,Bournemouth,3,1,Everton
+49,2019/9/15,Watford,2,2,Arsenal
+50,2019/9/16,Aston Villa,0,0,West Ham
+51,2019/9/20,Southampton,1,3,Bournemouth
+52,2019/9/21,Leicester City,2,1,Tottenham
+53,2019/9/21,Burnley,2,0,Norwich City
+54,2019/9/21,Everton,2,2,Sheffield Utd
+55,2019/9/21,Manchester City,8,0,Watford
+56,2019/9/21,Newcastle Utd,0,0,Brighton
+57,2019/9/22,Crystal Palace,1,1,Wolves
+58,2019/9/22,West Ham,2,0,Manchester Utd
+59,2019/9/22,Chelsea,1,2,Liverpool
+60,2019/9/22,Arsenal,3,2,Aston Villa
+61,2019/9/28,Sheffield Utd,0,1,Liverpool
+62,2019/9/28,Crystal Palace,2,0,Norwich City
+63,2019/9/28,Chelsea,2,0,Brighton
+64,2019/9/28,Bournemouth,2,2,West Ham
+65,2019/9/28,Aston Villa,2,2,Burnley
+66,2019/9/28,Wolves,2,0,Watford
+67,2019/9/28,Tottenham,2,1,Southampton
+68,2019/9/28,Everton,1,3,Manchester City
+69,2019/9/29,Leicester City,5,0,Newcastle Utd
+70,2019/9/30,Manchester Utd,1,1,Arsenal
+71,2019/10/5,Brighton,3,0,Tottenham
+72,2019/10/5,Norwich City,1,5,Aston Villa
+73,2019/10/5,Liverpool,2,1,Leicester City
+74,2019/10/5,Watford,0,0,Sheffield Utd
+75,2019/10/5,Burnley,1,0,Everton
+76,2019/10/5,West Ham,1,2,Crystal Palace
+77,2019/10/6,Manchester City,0,2,Wolves
+78,2019/10/6,Southampton,1,4,Chelsea
+79,2019/10/6,Arsenal,1,0,Bournemouth
+80,2019/10/6,Newcastle Utd,1,0,Manchester Utd
+81,2019/10/19,Everton,2,0,West Ham
+82,2019/10/19,Wolves,1,1,Southampton
+83,2019/10/19,Leicester City,2,1,Burnley
+84,2019/10/19,Tottenham,1,1,Watford
+85,2019/10/19,Bournemouth,0,0,Norwich City
+86,2019/10/19,Aston Villa,2,1,Brighton
+87,2019/10/19,Chelsea,1,0,Newcastle Utd
+88,2019/10/19,Crystal Palace,0,2,Manchester City
+89,2019/10/20,Manchester Utd,1,1,Liverpool
+90,2019/10/21,Sheffield Utd,1,0,Arsenal
+91,2019/10/25,Southampton,0,9,Leicester City
+92,2019/10/26,Manchester City,3,0,Aston Villa
+93,2019/10/26,Brighton,3,2,Everton
+94,2019/10/26,West Ham,1,1,Sheffield Utd
+95,2019/10/26,Watford,0,0,Bournemouth
+96,2019/10/26,Burnley,2,4,Chelsea
+97,2019/10/27,Newcastle Utd,1,1,Wolves
+98,2019/10/27,Liverpool,2,1,Tottenham
+99,2019/10/27,Arsenal,2,2,Crystal Palace
+100,2019/10/27,Norwich City,1,3,Manchester Utd
+101,2019/11/2,Bournemouth,1,0,Manchester Utd
+102,2019/11/2,Arsenal,1,1,Wolves
+103,2019/11/2,Sheffield Utd,3,0,Burnley
+104,2019/11/2,Brighton,2,0,Norwich City
+105,2019/11/2,West Ham,2,3,Newcastle Utd
+106,2019/11/2,Manchester City,2,1,Southampton
+107,2019/11/2,Aston Villa,1,2,Liverpool
+108,2019/11/2,Watford,1,2,Chelsea
+109,2019/11/3,Crystal Palace,0,2,Leicester City
+110,2019/11/3,Everton,1,1,Tottenham
+111,2019/11/8,Norwich City,0,2,Watford
+112,2019/11/9,Chelsea,2,0,Crystal Palace
+113,2019/11/9,Newcastle Utd,2,1,Bournemouth
+114,2019/11/9,Burnley,3,0,West Ham
+115,2019/11/9,Tottenham,1,1,Sheffield Utd
+116,2019/11/9,Southampton,1,2,Everton
+117,2019/11/9,Leicester City,2,0,Arsenal
+118,2019/11/10,Wolves,2,1,Aston Villa
+119,2019/11/10,Manchester Utd,3,1,Brighton
+120,2019/11/10,Liverpool,3,1,Manchester City
+121,2019/11/23,West Ham,2,3,Tottenham
+122,2019/11/23,Arsenal,2,2,Southampton
+123,2019/11/23,Everton,0,2,Norwich City
+124,2019/11/23,Crystal Palace,1,2,Liverpool
+125,2019/11/23,Watford,0,3,Burnley
+126,2019/11/23,Bournemouth,1,2,Wolves
+127,2019/11/23,Brighton,0,2,Leicester City
+128,2019/11/23,Manchester City,2,1,Chelsea
+129,2019/11/24,Sheffield Utd,3,3,Manchester Utd
+130,2019/11/25,Aston Villa,2,0,Newcastle Utd
+131,2019/11/30,Newcastle Utd,2,2,Manchester City
+132,2019/11/30,Liverpool,2,1,Brighton
+133,2019/11/30,Burnley,0,2,Crystal Palace
+134,2019/11/30,Chelsea,0,1,West Ham
+135,2019/11/30,Tottenham,0,3,Bournemouth
+136,2019/11/30,Southampton,2,1,Watford
+137,2019/12/1,Norwich City,2,2,Arsenal
+138,2019/12/1,Wolves,1,1,Sheffield Utd
+139,2019/12/1,Leicester City,2,1,Everton
+140,2019/12/1,Manchester Utd,2,2,Aston Villa
+141,2019/12/3,Crystal Palace,1,0,Bournemouth
+142,2019/12/3,Burnley,1,4,Manchester City
+143,2019/12/4,Wolves,2,0,West Ham
+144,2019/12/4,Leicester City,2,0,Watford
+145,2019/12/4,Southampton,2,1,Norwich City
+146,2019/12/4,Manchester Utd,2,1,Tottenham
+147,2019/12/4,Chelsea,2,1,Aston Villa
+148,2019/12/4,Liverpool,5,2,Everton
+149,2019/12/5,Sheffield Utd,0,2,Newcastle Utd
+150,2019/12/5,Arsenal,1,2,Brighton
+151,2019/12/7,Everton,3,1,Chelsea
+152,2019/12/7,Tottenham,5,0,Burnley
+153,2019/12/7,Watford,0,0,Crystal Palace
+154,2019/12/7,Bournemouth,0,3,Liverpool
+155,2019/12/7,Manchester City,1,2,Manchester Utd
+156,2019/12/8,Norwich City,1,2,Sheffield Utd
+157,2019/12/8,Newcastle Utd,2,1,Southampton
+158,2019/12/8,Aston Villa,1,4,Leicester City
+159,2019/12/8,Brighton,2,2,Wolves
+160,2019/12/9,West Ham,1,3,Arsenal
+161,2019/12/14,Liverpool,2,0,Watford
+162,2019/12/14,Sheffield Utd,2,0,Aston Villa
+163,2019/12/14,Chelsea,0,1,Bournemouth
+164,2019/12/14,Leicester City,1,1,Norwich City
+165,2019/12/14,Burnley,1,0,Newcastle Utd
+166,2019/12/14,Southampton,0,1,West Ham
+167,2019/12/15,Manchester Utd,1,1,Everton
+168,2019/12/15,Wolves,1,2,Tottenham
+169,2019/12/15,Arsenal,0,3,Manchester City
+170,2019/12/16,Crystal Palace,1,1,Brighton
+171,2019/12/21,Everton,0,0,Arsenal
+172,2019/12/21,Brighton,0,1,Sheffield Utd
+173,2019/12/21,Norwich City,1,2,Wolves
+174,2019/12/21,Aston Villa,1,3,Southampton
+175,2019/12/21,Newcastle Utd,1,0,Crystal Palace
+176,2019/12/21,Bournemouth,0,1,Burnley
+177,2019/12/21,Manchester City,3,1,Leicester City
+178,2019/12/22,Watford,2,0,Manchester Utd
+179,2019/12/22,Tottenham,0,2,Chelsea
+180,2019/12/26,Tottenham,1,1,Brighton
+181,2019/12/26,Aston Villa,0,0,Norwich City
+182,2019/12/26,Crystal Palace,1,1,West Ham
+183,2019/12/26,Chelsea,0,2,Southampton
+184,2019/12/26,Sheffield Utd,1,1,Watford
+185,2019/12/26,Everton,1,0,Burnley
+186,2019/12/26,Bournemouth,1,1,Arsenal
+187,2019/12/26,Manchester Utd,4,1,Newcastle Utd
+188,2019/12/26,Leicester City,0,4,Liverpool
+189,2019/12/27,Wolves,3,2,Manchester City
+190,2019/12/28,Brighton,2,0,Bournemouth
+191,2019/12/28,Watford,3,0,Aston Villa
+192,2019/12/28,Southampton,1,1,Crystal Palace
+193,2019/12/28,Newcastle Utd,1,2,Everton
+194,2019/12/28,Norwich City,2,2,Tottenham
+195,2019/12/28,West Ham,1,2,Leicester City
+196,2019/12/28,Burnley,0,2,Manchester Utd
+197,2019/12/29,Arsenal,1,2,Chelsea
+198,2019/12/29,Liverpool,1,0,Wolves
+199,2019/12/29,Manchester City,2,0,Sheffield Utd
+200,2020/1/1,Brighton,1,1,Chelsea
+201,2020/1/1,Burnley,1,2,Aston Villa
+202,2020/1/1,Watford,2,1,Wolves
+203,2020/1/1,Southampton,1,0,Tottenham
+204,2020/1/1,Newcastle Utd,0,3,Leicester City
+205,2020/1/1,Norwich City,1,1,Crystal Palace
+206,2020/1/1,Manchester City,2,1,Everton
+207,2020/1/1,West Ham,4,0,Bournemouth
+208,2020/1/1,Arsenal,2,0,Manchester Utd
+209,2020/1/2,Liverpool,2,0,Sheffield Utd
+210,2020/1/10,Sheffield Utd,1,0,West Ham
+211,2020/1/11,Crystal Palace,1,1,Arsenal
+212,2020/1/11,Manchester Utd,4,0,Norwich City
+213,2020/1/11,Chelsea,3,0,Burnley
+214,2020/1/11,Leicester City,1,2,Southampton
+215,2020/1/11,Wolves,1,1,Newcastle Utd
+216,2020/1/11,Everton,1,0,Brighton
+217,2020/1/11,Tottenham,0,1,Liverpool
+218,2020/1/12,Bournemouth,0,3,Watford
+219,2020/1/12,Aston Villa,1,6,Manchester City
+220,2020/1/18,Watford,0,0,Tottenham
+221,2020/1/18,West Ham,1,1,Everton
+222,2020/1/18,Southampton,2,3,Wolves
+223,2020/1/18,Arsenal,1,1,Sheffield Utd
+224,2020/1/18,Norwich City,1,0,Bournemouth
+225,2020/1/18,Manchester City,2,2,Crystal Palace
+226,2020/1/18,Brighton,1,1,Aston Villa
+227,2020/1/18,Newcastle Utd,1,0,Chelsea
+228,2020/1/19,Burnley,2,1,Leicester City
+229,2020/1/19,Liverpool,2,0,Manchester Utd
+230,2020/1/21,Crystal Palace,0,2,Southampton
+231,2020/1/21,Sheffield Utd,0,1,Manchester City
+232,2020/1/21,Everton,2,2,Newcastle Utd
+233,2020/1/21,Bournemouth,3,1,Brighton
+234,2020/1/21,Aston Villa,2,1,Watford
+235,2020/1/21,Chelsea,2,2,Arsenal
+236,2020/1/22,Tottenham,2,1,Norwich City
+237,2020/1/22,Leicester City,4,4,West Ham
+238,2020/1/22,Manchester Utd,0,2,Burnley
+239,2020/1/23,Wolves,0,2,Liverpool
+240,2020/1/29,West Ham,0,2,Liverpool
+241,2020/2/1,Leicester City,2,2,Chelsea
+242,2020/2/1,Liverpool,4,1,Southampton
+243,2020/2/1,Crystal Palace,0,1,Sheffield Utd
+244,2020/2/1,Bournemouth,2,1,Aston Villa
+245,2020/2/1,Watford,2,3,Everton
+246,2020/2/1,West Ham,3,3,Brighton
+247,2020/2/1,Newcastle Utd,0,0,Norwich City
+248,2020/2/1,Manchester Utd,0,0,Wolves
+249,2020/2/2,Burnley,0,0,Arsenal
+250,2020/2/2,Tottenham,2,0,Manchester City
+251,2020/2/8,Everton,3,1,Crystal Palace
+252,2020/2/8,Brighton,1,1,Watford
+253,2020/2/9,Sheffield Utd,2,1,Bournemouth
+254,2020/2/14,Wolves,0,0,Leicester City
+255,2020/2/15,Southampton,1,2,Burnley
+256,2020/2/15,Norwich City,0,1,Liverpool
+257,2020/2/16,Aston Villa,2,3,Tottenham
+258,2020/2/16,Arsenal,4,0,Newcastle Utd
+259,2020/2/17,Chelsea,0,2,Manchester Utd
+260,2020/2/19,Manchester City,2,0,West Ham
+261,2020/2/22,Chelsea,2,1,Tottenham
+262,2020/2/22,Sheffield Utd,1,1,Brighton
+263,2020/2/22,Southampton,2,0,Aston Villa
+264,2020/2/22,Crystal Palace,1,0,Newcastle Utd
+265,2020/2/22,Burnley,3,0,Bournemouth
+266,2020/2/22,Leicester City,0,1,Manchester City
+267,2020/2/23,Wolves,3,0,Norwich City
+268,2020/2/23,Manchester Utd,3,0,Watford
+269,2020/2/23,Arsenal,3,2,Everton
+270,2020/2/24,Liverpool,3,2,West Ham
+271,2020/2/28,Norwich City,1,0,Leicester City
+272,2020/2/29,Brighton,0,1,Crystal Palace
+273,2020/2/29,Newcastle Utd,0,0,Burnley
+274,2020/2/29,West Ham,3,1,Southampton
+275,2020/2/29,Aston Villa,,,Sheffield Utd
+276,2020/2/29,Bournemouth,2,2,Chelsea
+277,2020/2/29,Watford,3,0,Liverpool
+278,2020/3/1,Everton,1,1,Manchester Utd
+279,2020/3/1,Tottenham,2,3,Wolves
+280,2020/3/7,Liverpool,2,1,Bournemouth
+281,2020/3/7,Southampton,0,1,Newcastle Utd
+282,2020/3/7,Crystal Palace,1,0,Watford
+283,2020/3/7,Sheffield Utd,1,0,Norwich City
+284,2020/3/7,Arsenal,1,0,West Ham
+285,2020/3/7,Wolves,0,0,Brighton
+286,2020/3/7,Burnley,1,1,Tottenham
+287,2020/3/8,Chelsea,4,0,Everton
+288,2020/3/8,Manchester Utd,2,0,Manchester City
+289,2020/3/9,Leicester City,4,0,Aston Villa
+290,2020/3/11,Manchester City,,,Arsenal
+291,2020/3/14,Watford,,,Leicester City
+292,2020/3/14,Bournemouth,,,Crystal Palace
+293,2020/3/14,Newcastle Utd,,,Sheffield Utd
+294,2020/3/14,Brighton,,,Arsenal
+295,2020/3/14,Norwich City,,,Southampton
+296,2020/3/14,Manchester City,,,Burnley
+297,2020/3/14,Aston Villa,,,Chelsea
+298,2020/3/15,West Ham,,,Wolves
+299,2020/3/15,Tottenham,,,Manchester Utd
+300,2020/3/16,Everton,,,Liverpool
+301,2020/3/20,Tottenham,,,West Ham
+302,2020/3/22,Manchester Utd,,,Sheffield Utd
+303,2020/3/21,Chelsea,,,Manchester City
+304,2020/3/21,Newcastle Utd,,,Aston Villa
+305,2020/3/21,Norwich City,,,Everton
+306,2020/3/21,Burnley,,,Watford
+307,2020/3/21,Liverpool,,,Crystal Palace
+308,2020/3/22,Leicester City,,,Brighton
+309,2020/3/22,Wolves,,,Bournemouth
+310,2020/3/22,Southampton,,,Arsenal
+311,2020/4/4,Aston Villa,,,Wolves
+312,2020/4/4,Crystal Palace,,,Burnley
+313,2020/4/4,Watford,,,Southampton
+314,2020/4/4,Arsenal,,,Norwich City
+315,2020/4/4,Brighton,,,Manchester Utd
+316,2020/4/4,Bournemouth,,,Newcastle Utd
+317,2020/4/4,Sheffield Utd,,,Tottenham
+318,2020/4/5,West Ham,,,Chelsea
+319,2020/4/5,Manchester City,,,Liverpool
+320,2020/4/6,Everton,,,Leicester City
+321,2020/4/10,Newcastle Utd,,,West Ham
+322,2020/4/11,Manchester Utd,,,Bournemouth
+323,2020/4/11,Southampton,,,Manchester City
+324,2020/4/11,Burnley,,,Sheffield Utd
+325,2020/4/11,Norwich City,,,Brighton
+326,2020/4/11,Leicester City,,,Crystal Palace
+327,2020/4/11,Tottenham,,,Everton
+328,2020/4/12,Chelsea,,,Watford
+329,2020/4/12,Liverpool,,,Aston Villa
+330,2020/4/13,Wolves,,,Arsenal
+331,2020/4/18,Crystal Palace,,,Chelsea
+332,2020/4/18,Manchester City,,,Newcastle Utd
+333,2020/4/18,Bournemouth,,,Tottenham
+334,2020/4/18,Watford,,,Norwich City
+335,2020/4/18,West Ham,,,Burnley
+336,2020/4/18,Everton,,,Southampton
+337,2020/4/18,Arsenal,,,Leicester City
+338,2020/4/19,Sheffield Utd,,,Wolves
+339,2020/4/19,Aston Villa,,,Manchester Utd
+340,2020/4/20,Brighton,,,Liverpool
+341,2020/4/25,Liverpool,,,Burnley
+342,2020/4/25,Watford,,,Newcastle Utd
+343,2020/4/25,Norwich City,,,West Ham
+344,2020/4/25,Manchester Utd,,,Southampton
+345,2020/4/25,Wolves,,,Everton
+346,2020/4/25,Bournemouth,,,Leicester City
+347,2020/4/25,Brighton,,,Manchester City
+348,2020/4/26,Sheffield Utd,,,Chelsea
+349,2020/4/26,Tottenham,,,Arsenal
+350,2020/4/27,Aston Villa,,,Crystal Palace
+351,2020/5/2,Manchester City,,,Bournemouth
+352,2020/5/2,Newcastle Utd,,,Tottenham
+353,2020/5/2,Burnley,,,Wolves
+354,2020/5/2,West Ham,,,Watford
+355,2020/5/2,Crystal Palace,,,Manchester Utd
+356,2020/5/2,Chelsea,,,Norwich City
+357,2020/5/2,Everton,,,Aston Villa
+358,2020/5/2,Arsenal,,,Liverpool
+359,2020/5/2,Southampton,,,Brighton
+360,2020/5/2,Leicester City,,,Sheffield Utd
+361,2020/5/9,Tottenham,,,Leicester City
+362,2020/5/9,Brighton,,,Newcastle Utd
+363,2020/5/9,Wolves,,,Crystal Palace
+364,2020/5/9,Liverpool,,,Chelsea
+365,2020/5/9,Sheffield Utd,,,Everton
+366,2020/5/9,Manchester Utd,,,West Ham
+367,2020/5/9,Bournemouth,,,Southampton
+368,2020/5/9,Watford,,,Manchester City
+369,2020/5/9,Aston Villa,,,Arsenal
+370,2020/5/9,Norwich City,,,Burnley
+371,2020/5/17,Chelsea,,,Wolves
+372,2020/5/17,Manchester City,,,Norwich City
+373,2020/5/17,Newcastle Utd,,,Liverpool
+374,2020/5/17,Leicester City,,,Manchester Utd
+375,2020/5/17,Everton,,,Bournemouth
+376,2020/5/17,West Ham,,,Aston Villa
+377,2020/5/17,Crystal Palace,,,Tottenham
+378,2020/5/17,Arsenal,,,Watford
+379,2020/5/17,Southampton,,,Sheffield Utd
+380,2020/5/17,Burnley,,,Brighton

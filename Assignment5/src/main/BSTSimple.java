@@ -2,6 +2,8 @@ package main;
 
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<Key, Value> {
     @Override
@@ -39,7 +41,7 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
     public Value put(Key key, Value value) {
         NodeValue nodeValue = put(root, key, value);
         if (root == null) root = nodeValue.node;
-        if (nodeValue.value==null) root.count++;
+        if (nodeValue.value == null) root.count++;
         return nodeValue.value;
     }
 
@@ -94,7 +96,10 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
      */
     private NodeValue put(Node node, Key key, Value value) {
         // If node is null, then we return the newly constructed Node, and value=null
-        if (node == null) return new NodeValue(new Node(key, value, 0), null);
+        if (node == null) {
+            Node newNode = new Node(key, value, 0);
+            return new NodeValue(newNode, value);
+        }
         int cf = key.compareTo(node.key);
         if (cf == 0) {
             // If keys match, then we return the node and its value
@@ -103,26 +108,55 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
             return result;
         } else if (cf < 0) {
             // if key is less than node's key, we recursively invoke put in the smaller subtree
-            NodeValue result = put(node.smaller, key, value);
-            if (node.smaller == null)
-                node.smaller = result.node;
-            if (result.value==null)
-                result.node.count++;
-            return result;
+            if (node.smaller == null) {
+                Node newNode = new Node(key, value, 0);
+                node.smaller = newNode;
+                node.count++;
+            } else{
+                put(node.smaller, key, value);
+            }
         } else {
             // if key is greater than node's key, we recursively invoke put in the larger subtree
-            NodeValue result = put(node.larger, key, value);
-            if (node.larger == null)
-                node.larger = result.node;
-            if (result.value==null)
-                result.node.count++;
-            return result;
+            if (node.larger == null) {
+                Node newNode = new Node(key, value, 0);
+                node.larger = newNode;
+                node.count++;
+            } else{
+                put(node.larger, key, value);
+            }
         }
+        node.count = size(node.smaller) + size(node.larger) + 1;
+        return new NodeValue(node, node.value);
     }
 
     private Node delete(Node x, Key key) {
         // TO BE IMPLEMENTED ...
-        return null;
+        /* Base Case: If the tree is empty */
+        if (x == null) return null;
+        /* Otherwise, recur down the tree */
+        int comparator = key.compareTo(x.key);
+        if (comparator < 0) {
+            x.smaller = delete(x.smaller, key);
+            x.count = size(x.smaller) + size(x.larger) + 1;
+        }
+        else if (comparator > 0) {
+            x.larger = delete(x.larger, key);
+            x.count = size(x.smaller) + size(x.larger) + 1;
+        }
+        // if key is same as root's key, then This is the node to be deleted
+        else {
+            // node with only one child or two children: Get the inorder successor (smallest in the right subtree)
+            if (x.larger == null)
+                return x.smaller;
+            if (x.smaller == null)
+                return x.larger;
+            Node minNode = min(root.larger);
+            x.value = minNode.value;
+            x.larger = deleteMin(x.larger);
+            x.count = size(x.smaller) + size(x.larger) + 1;
+            return x;
+        }
+        return x;
         // ... END IMPLEMENTATION
     }
 
@@ -139,8 +173,10 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
 
     private Node min(Node x) {
         if (x == null) throw new RuntimeException("min not implemented for null");
-        else if (x.smaller == null) return x;
-        else return min(x.smaller);
+        while(x.smaller != null){
+            x = x.smaller;
+        }
+        return x;
     }
 
     /**
@@ -158,8 +194,13 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
         if (q>0) f.apply(node.key, node.value);
     }
 
-    private int depth(Node key) {
-        return 0;
+    public int depth() {
+        return depth(root);
+    }
+
+    private int depth(Node node) {
+        if (node == null) return -1;
+        else return 1 + Math.max(depth(node.smaller),depth(node.larger));
     }
 
     private class NodeValue {
@@ -189,7 +230,7 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
         final int depth;
         Node smaller = null;
         Node larger = null;
-        int count = 0;
+        int count = 1;
 
         @Override
         public String toString() {
@@ -240,5 +281,47 @@ public class BSTSimple<Key extends Comparable<Key>, Value> implements BSTdetail<
         StringBuffer sb = new StringBuffer();
         show(root, sb, 0);
         return sb.toString();
+    }
+    private static void generateBalancedBST( List<Integer> range, ArrayList<Integer> balancedBSTNodeList, int left, int right){
+        if (left > right) return;
+        int mid = left + (right - left)/2;
+        balancedBSTNodeList.add(range.get(mid));
+        if (right == left) return;
+        generateBalancedBST(range,balancedBSTNodeList,left,mid-1);
+        generateBalancedBST(range,balancedBSTNodeList,mid+1, right);
+    }
+
+    public static void main(String[] args){
+        List<Integer> range = IntStream.rangeClosed(0, 1000).boxed().collect(Collectors.toList());
+
+        for( int operationTimes = 1000; operationTimes <= 100000; operationTimes = operationTimes + 1000 ){
+            int originalSize = 0,totalDepth = 0, totalSize = 0;
+            for (int k = 0; k < 10; k++) {   // run experiment 10 times to get mean result;
+                BSTSimple<Integer, Integer> balancedBST = new BSTSimple<>();
+                ArrayList<Integer> balancedBSTNodeList = new ArrayList<>();
+                generateBalancedBST(range, balancedBSTNodeList, 0, 1000-1);
+                for (int j : balancedBSTNodeList) {
+                    balancedBST.put(j, 1); // set value always 1
+                }
+                originalSize = balancedBST.size();
+                for (int x = 0; x < operationTimes; x++) {
+                    int operationRandom = (int)(1 + Math.random()*10);
+                    int deletionRandom = (int) (1 + Math.random() * 1000 * 2);
+                    if (operationRandom < 5 ) {
+                        balancedBST.delete(deletionRandom);
+                    } else {
+                        balancedBST.put(deletionRandom, 1);
+                    }
+                }
+                totalDepth += balancedBST.depth();
+                totalSize += balancedBST.size();
+            }
+            System.out.println("Original BST size: " + originalSize +
+                    " operation times: " + operationTimes +
+                    " BST size after operation: " + (double)totalSize/10 +
+                    " BST depth: " + (double)totalDepth/10 +
+                    " sqrtSize: " + Math.sqrt((double)totalSize/10) +
+                    " logSize: " + Math.log((double)totalSize/10));
+        }
     }
 }
