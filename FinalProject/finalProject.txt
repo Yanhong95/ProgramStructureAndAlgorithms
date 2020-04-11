@@ -1,0 +1,120 @@
+您的任务是开发一个分级系统，该系统能够评估以下表达式 P（xi，xj）;
+其中xi，xj是一组竞争元素X中的元素，其中P（xi，xj）是xi胜过的概率xj,
+该表达式的副产品是构建元素表的能力，这样可以使元素xi出现在另一个元素xj上方，则可以推断P（xi，xj）> 0。
+请注意，可能存在一个一组不确定的循环（如石头，纸张，剪刀），在这种情况下，您将不得不在表中将这些元素标记为相等。
+还希望P的值不仅是一个整数，而且是概率密度函数（pdf），换句话说，P上应该有某种边界，两个值之间可能是统一的pdf。随着您获得更多数据，界限将变窄（即您的精度将提高）。
+系统输入的内容将是一系列先前的相遇结果。这些结果可以是输赢，也可以是分数，例如在英超联赛（EPL）中。如果合适，如果您觉得很重要，也可以考虑主队优势。
+您选择的元素完全取决于您。独创性可能会有奖励积分。但是，我的建议是专注于EPL，
+尤其是考虑到COVID-19已经突然终止（或至少推迟了本赛季）。尽管利物浦肯定在赛季末排名第一（从数学上讲，其他任何一支球队都无法超越他们），
+但是接下来的五个位置都很重要，最后三个位置也将降级。
+希望数据输入的顺序不影响结果。
+
+所有队伍在数据输入开始之前 所有积分为空, 然后就逐渐写入数据, 根据真实数据来校正对其他队伍获胜的概率.
+写入的假设是分数的话, 我们根据分数差距大小模拟对队伍胜率的影响权重, 分差越大,说明实力越悬殊, 这样就导致胜率的偏差越大.
+
+假设球队A和球队B踢球, 7比5 那么意味着赢了 累计3分 我们预计下一场比赛, A也最有可能比B多两分 数据分布分别是-3,-1,0,1,2,3,4,5,6
+这个赛季最高一场得5分
+期望就是平均值, 也就是2
+这一次比赛假设为7:5 赢了2份
+下一次比赛假设为2:1 赢了1分
+平均期望就是(2+1)/2=1.5 我们假设他下一场最有可能赢1.5分
+然后把所有他和其他队的期望加起来的排序就是rank. 
+
+mean = (mean1 + mean2)/2
+std.dev = sqrt(variance1^2 + variance2^2)
+variance = variance1^2 + variance2^2
+两个正态分布相加
+
+输入一个数, 比如说2 然后算看 2 是离 6 近还是离 -6 近, 就是说极端的情况就是赢6分或者输6分
+
+越往后的分数越重要, 所以mean的算法是 这个时候的得分加上之前mean的平均值, 而不是三个值除以3
+
+如果是2, 然后我们就算 -2, -1,0,1,2,3,4,5,6 的方差 然后算他的pdf
+如果是3, 然后我们就算 0,1,2,3,4,5,6 的方差 然后算他的pdf
+如果是-1, -1 离 -6近 我们就算, -6, -5,-4,-3,-2, -1, 0, 1, 2, 3, 4的方差 然后算他的pdf
+如果是5 那我们就算 4 5 6 的方差 然后算他的pdf
+如果大于6 或者小于 -6 这属于稀有情况, name我们就按照 5 6 7 或者 -5 -6 -7 来算方差 然后算他的pdf
+
+20只球队进行双循环, 每两个球队比赛两次 一共38次比赛
+胜一场3分平一场1分负一场0分
+联赛结束吗积分多的队考前,
+如果两队或者两队以上积分相等,依照下列数据排名:
+比较球队联赛净胜球
+比较球队的联赛进球数
+比较相互战绩
+比较相互战绩中的客场进球数
+
+```java
+package rank;
+
+import java.util.HashMap;
+import java.util.stream.IntStream;
+
+public class Calculator {
+public static HashMap<String, int[]> teamsWithNormalDist = new HashMap<String, int[]>();
+
+public static void predictNormalDist(Match match){
+    String homeTeam = match.homeTeam;
+    String awayTeam = match.awayTeam;
+    int homeTeamGoals = match.homeTeamGoals;
+    int awayTeamGoals = match.awayTeamGoals;
+
+    String game = homeTeam + "VS" + awayTeam;
+
+    int mean;
+    int absMean = Math.min(Math.abs(homeTeamGoals - awayTeamGoals), 6);
+    if( homeTeamGoals - awayTeamGoals >= 0 ){
+        mean = Math.min(homeTeamGoals - awayTeamGoals, 6);
+    } else {
+        mean = Math.max(-6, homeTeamGoals - awayTeamGoals);
+    }
+
+    if (!teamsWithNormalDist.containsKey(game)){
+        // Whenever the gap between two teams greater than six we decreasing it to 6 manually
+        // because this situation is too rare to repeat
+        if( absMean <= 3 ){
+            //generate sample to calculate variance
+            int[] nums = IntStream.range( absMean - 4, absMean + 5 ).toArray();
+            int variance = calculateVariance(absMean, nums);
+            teamsWithNormalDist.put(game, new int[]{ mean, variance });
+        } else if ( absMean > 3 && absMean <= 5 ){
+            int border = 6 - absMean;
+            int[] nums = IntStream.range( absMean - border, absMean + border + 1 ).toArray();
+            int variance = calculateVariance(absMean, nums);
+            teamsWithNormalDist.put(game, new int[]{ mean, variance });
+        } else {
+            int[] nums = new int[]{ 5, 6, 7 };
+            int variance = calculateVariance( absMean, nums );
+            teamsWithNormalDist.put(game, new int[]{ mean, variance });
+        }
+    } else {
+        // If the two teams have already played
+        int[] NDList = teamsWithNormalDist.get(game);
+        int previousMean = NDList[0];
+        int previousVariance = NDList[1];       
+        int newVariance;
+        if( absMean <= 3 ){
+            //generate sample to calculate variance
+            int[] nums = IntStream.range( absMean - 4, absMean + 5 ).toArray();
+            newVariance = calculateVariance(absMean, nums);
+        } else if ( absMean > 3 && absMean <= 5 ){
+            int border = 6 - absMean;
+            int[] nums = IntStream.range( absMean - border, absMean + border + 1 ).toArray();
+            newVariance = calculateVariance(absMean, nums);
+        } else {
+            int[] nums = new int[]{ 5, 6, 7 };
+            newVariance = calculateVariance(absMean, nums);
+        }
+    }
+}
+
+public static Integer calculateVariance(int mean, int[] nums){
+    int n = nums.length;
+    int v = 0;
+    for(int num : nums ){
+        v += Math.pow(Math.abs(num - mean), 2);
+    }
+    int variance = v/n;
+    return variance;
+}}
+```
