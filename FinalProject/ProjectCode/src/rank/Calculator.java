@@ -27,7 +27,7 @@ public class Calculator {
             game = gameHA;
         }
 
-        //
+        // prediction for suspended matches.
         if(homeTeamGoals == -1 && awayTeamGoals == -1){
             Random random = new Random();
             if (teamsWithNormalDist.containsKey(game)){
@@ -86,9 +86,9 @@ public class Calculator {
             Double newVariance;
             Double newMean = (mean + previousMean)/2;
             if( absMean <= 3 ){
-                newVariance = previousVariance + 4;
+                newVariance = previousVariance + 4.0;
             } else {
-                newVariance = previousVariance + 1;
+                newVariance = previousVariance + 1.0;
             }
             teamsWithNormalDist.replace(game, new Double[]{ newMean, newVariance });
         }
@@ -138,7 +138,8 @@ public class Calculator {
             };
 
             double winningPercentage = 1 - calculateCDF(0, mean, variance);
-            double Prediction = calculateCDF(expectedGoal + 0.5, mean, variance) - calculateCDF(expectedGoal - 0.5, mean, variance);
+            double Prediction = calculateCDF(expectedGoal + 0.5, mean, variance) -
+                    calculateCDF(expectedGoal - 0.5, mean, variance);
 
             System.out.println( "Team " + homeTeam + " has " + String.format("%.2f", winningPercentage * 100) +
                     "% chances of winning Team " + awayTeam + " at next match."+ "\n" +
@@ -148,7 +149,6 @@ public class Calculator {
         }catch(Exception e){
             System.out.println( "oops, Unable to find previous match between these two teams, please re-enter.");
         }
-
     }
 
     // Normal distribution CDF (Cumulative distribution function ) with mean and variance
