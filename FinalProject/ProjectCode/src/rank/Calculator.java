@@ -53,11 +53,17 @@ public class Calculator {
                 homeTeamGoals = 0;
                 awayTeamGoals = 0;
             }
-            System.out.println("Prediction for match of " + match.getMatchDate() +
+            System.out.println(match.getIndex() + " Prediction for match of " + match.getMatchDate() +
                     ": HomeTeam: " + match.getHomeTeam() +
                     " Goals: " + homeTeamGoals +
                     " AwayTeam: " + match.getAwayTeam() +
                     " Goals: " + awayTeamGoals );
+        }else{
+            System.out.println(match.getIndex() + " The match completed on " + match.getMatchDate() +
+                    ": HomeTeam: " + match.getHomeTeam() +
+                    " Goals: " + match.getHomeTeamGoals() +
+                    " AwayTeam: " + match.getAwayTeam() +
+                    " Goals: " + match.getAwayTeamGoals());
         };
 
         int mean;

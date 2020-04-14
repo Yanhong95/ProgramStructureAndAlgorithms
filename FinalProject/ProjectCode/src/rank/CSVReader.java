@@ -15,7 +15,7 @@ public class CSVReader {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             while ((line = br.readLine()) != null) {
                 String[] matchList = line.split(cvsSplitBy);
-                Match match = new Match(matchList[1],matchList[2],matchList[5],matchList[3],matchList[4]);
+                Match match = new Match(matchList[0],matchList[1],matchList[2],matchList[5],matchList[3],matchList[4]);
                 // System.out.println(match.getMatchDate());
                 matches.add(match);
             }

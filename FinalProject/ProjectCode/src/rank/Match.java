@@ -6,19 +6,40 @@ import java.util.Date;
 
 public class Match {
 
+    private static int globalIndex;
+    int index;
     Date matchDate;
     String homeTeam;
     String awayTeam;
     int homeTeamGoals;
     int awayTeamGoals;
 
-    public Match(String date, String homeTeam, String awayTeam, String homeTeamGoals, String awayTeamGoals) {
+
+    public Match(String index, String date, String homeTeam, String awayTeam, String homeTeamGoals, String awayTeamGoals) {
         SimpleDateFormat sdf =new SimpleDateFormat("yyyy/MM/dd");
         try{
             this.matchDate = sdf.parse(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        this.index = Integer.parseInt(index);
+        globalIndex = this.index;
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        // Once this match was delayed by the the COVID-19, we assume the goals to be -1
+        this.homeTeamGoals = homeTeamGoals.equals("") ?  -1 : Integer.parseInt(homeTeamGoals);
+        this.awayTeamGoals = awayTeamGoals.equals("") ?  -1 : Integer.parseInt(awayTeamGoals);
+    }
+
+    public Match( String date, String homeTeam, String awayTeam, String homeTeamGoals, String awayTeamGoals) {
+        SimpleDateFormat sdf =new SimpleDateFormat("yyyy/MM/dd");
+        try{
+            this.matchDate = sdf.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.index = globalIndex + 1;
+        globalIndex ++;
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         // Once this match was delayed by the the COVID-19, we assume the goals to be -1
@@ -34,6 +55,14 @@ public class Match {
                 ", awayTeam='" + awayTeam + '\'' +
                 ", homeTeamGoals=" + homeTeamGoals +
                 ", awayTeamGoals=" + awayTeamGoals;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 
     public String getMatchDate() {
